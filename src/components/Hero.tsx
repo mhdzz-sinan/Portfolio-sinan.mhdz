@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ArrowRight, Gear, Cube, GitBranch } from '@phosphor-icons/react';
+import SocialLinks from './SocialLinks';
 
 const Hero = () => {
   useEffect(() => {
@@ -30,7 +31,13 @@ const Hero = () => {
       y: 20,
       duration: 0.6,
       ease: 'power2.out'
-    }, '-=0.3');
+    }, '-=0.3')
+    .from('.hero-social', {
+      opacity: 0,
+      x: 50,
+      duration: 0.8,
+      ease: 'power3.out'
+    }, '-=0.4');
 
     // Floating particles
     gsap.to('.floating-particle', {
@@ -84,6 +91,11 @@ const Hero = () => {
       </div>
       <div className="absolute bottom-40 left-20 gear-icon opacity-10" style={{ animationDirection: 'reverse' }}>
         <Gear size={48} weight="light" className="text-accent" />
+      </div>
+
+      {/* Social Links - Right Side */}
+      <div className="hero-social absolute right-8 top-1/2 -translate-y-1/2 hidden lg:block">
+        <SocialLinks variant="hero" showLabels />
       </div>
 
       {/* Main Content */}
