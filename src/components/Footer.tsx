@@ -1,4 +1,5 @@
-import { Gear, Heart } from '@phosphor-icons/react';
+import { Gear } from '@phosphor-icons/react';
+import SocialLinks from './SocialLinks';
 
 const Footer = () => {
   const scrollToSection = (id: string) => {
@@ -52,20 +53,16 @@ const Footer = () => {
             ))}
           </div>
 
-          {/* Copyright */}
-          <div className="text-sm text-foreground/60 flex items-center gap-2">
-            <span>© {currentYear} – Future in Progress</span>
-          </div>
+          {/* Social Links */}
+          <SocialLinks variant="footer" />
         </div>
 
         {/* Separator */}
         <div className="mt-8 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
 
-        {/* Made with Love */}
-        <div className="mt-6 text-center text-sm text-foreground/50 flex items-center justify-center gap-2">
-          <span>Crafted with</span>
-          <Heart size={16} weight="fill" className="text-red-500 animate-pulse" />
-          <span>& cutting-edge tech</span>
+        {/* Copyright */}
+        <div className="mt-6 text-center text-sm text-foreground/50">
+          <span>© {currentYear} – Future in Progress</span>
         </div>
       </div>
     </footer>
