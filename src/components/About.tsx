@@ -71,7 +71,7 @@ const About = () => {
     { label: 'Enthusiast in Design & Innovation', value: 'Design' },
     { label: 'Industrial Training & Internships', value: 'Internships' },
     { label: 'Simulation & Analysis', value: 'Simulation' },
-    { label: 'Manufacturing & DFM', value: 'DFM' },
+    { label: 'Manufacturing & DFM', value: 'Manufacturing' },
     { label: 'Automation & Systems', value: 'Auto' },
   ];
 
