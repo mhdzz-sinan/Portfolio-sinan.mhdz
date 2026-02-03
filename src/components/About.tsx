@@ -69,7 +69,7 @@ const About = () => {
     { label: 'Active CAD Prototyping', value: 'CAD' },
     { label: 'Hands-on Technical Training', value: 'Workshops' },
     { label: 'Enthusiast in Design & Innovation', value: 'Design' },
-    { label: 'Industrial Training & Internships', value: 'Industry' },
+    { label: 'Industrial Training & Internships', value: 'Internships' },
     { label: 'Simulation & Analysis', value: 'FEA/CFD' },
     { label: 'Manufacturing & DFM', value: 'DFM' },
     { label: 'Automation & Systems', value: 'Auto' },
