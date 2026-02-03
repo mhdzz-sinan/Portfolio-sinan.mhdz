@@ -70,7 +70,7 @@ const About = () => {
     { label: 'Hands-on Technical Training', value: 'Workshops' },
     { label: 'Enthusiast in Design & Innovation', value: 'Design' },
     { label: 'Industrial Training & Internships', value: 'Internships' },
-    { label: 'Simulation & Analysis', value: 'FEA/CFD' },
+    { label: 'Simulation & Analysis', value: 'Simulation' },
     { label: 'Manufacturing & DFM', value: 'DFM' },
     { label: 'Automation & Systems', value: 'Auto' },
   ];
