@@ -68,7 +68,7 @@ const About = () => {
     { label: 'Advanced Engineering Projects', value: '2+' },
     { label: 'Active CAD Prototyping', value: 'CAD' },
     { label: 'Hands-on Technical Training', value: 'Workshops' },
-    { label: 'Enthusiast Design & Innovation', value: 'Design' },
+    { label: 'Enthusiast in Design & Innovation', value: 'Design' },
     { label: 'Industrial Training & Internships', value: 'Industry' },
     { label: 'Simulation & Analysis', value: 'FEA/CFD' },
     { label: 'Manufacturing & DFM', value: 'DFM' },
