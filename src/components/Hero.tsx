@@ -2,37 +2,33 @@ import { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ArrowRight, Gear, Cube, GitBranch } from '@phosphor-icons/react';
 import SocialLinks from './SocialLinks';
-
 const Hero = () => {
   useEffect(() => {
-    const tl = gsap.timeline({ delay: 3.5 });
-
+    const tl = gsap.timeline({
+      delay: 3.5
+    });
     tl.from('.hero-title', {
       opacity: 0,
       y: 50,
       duration: 1,
       ease: 'power3.out'
-    })
-    .from('.hero-subtitle', {
+    }).from('.hero-subtitle', {
       opacity: 0,
       y: 30,
       duration: 0.8,
       ease: 'power2.out'
-    }, '-=0.5')
-    .from('.hero-badge', {
+    }, '-=0.5').from('.hero-badge', {
       opacity: 0,
       scale: 0.8,
       duration: 0.6,
       stagger: 0.1,
       ease: 'back.out(1.7)'
-    }, '-=0.4')
-    .from('.hero-button', {
+    }, '-=0.4').from('.hero-button', {
       opacity: 0,
       y: 20,
       duration: 0.6,
       ease: 'power2.out'
-    }, '-=0.3')
-    .from('.hero-social', {
+    }, '-=0.3').from('.hero-social', {
       opacity: 0,
       x: 50,
       duration: 0.8,
@@ -57,39 +53,52 @@ const Hero = () => {
       ease: 'none'
     });
   }, []);
-
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Grid Background */}
       <div className="absolute inset-0 grid-bg opacity-30" />
 
       {/* Gradient Glow */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-neon-cyan/20 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-neon-purple/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-neon-purple/20 rounded-full blur-3xl animate-pulse" style={{
+      animationDelay: '1s'
+    }} />
 
       {/* Floating Particles */}
       <div className="absolute top-1/4 left-1/4 floating-particle">
-        <div className="w-2 h-2 bg-primary rounded-full" style={{ boxShadow: 'var(--glow-cyan)' }} />
+        <div className="w-2 h-2 bg-primary rounded-full" style={{
+        boxShadow: 'var(--glow-cyan)'
+      }} />
       </div>
-      <div className="absolute top-1/3 right-1/3 floating-particle" style={{ animationDelay: '1s' }}>
-        <div className="w-3 h-3 bg-accent rounded-full" style={{ boxShadow: 'var(--glow-purple)' }} />
+      <div className="absolute top-1/3 right-1/3 floating-particle" style={{
+      animationDelay: '1s'
+    }}>
+        <div className="w-3 h-3 bg-accent rounded-full" style={{
+        boxShadow: 'var(--glow-purple)'
+      }} />
       </div>
-      <div className="absolute bottom-1/3 left-1/3 floating-particle" style={{ animationDelay: '2s' }}>
-        <div className="w-2 h-2 bg-secondary rounded-full" style={{ boxShadow: 'var(--glow-blue)' }} />
+      <div className="absolute bottom-1/3 left-1/3 floating-particle" style={{
+      animationDelay: '2s'
+    }}>
+        <div className="w-2 h-2 bg-secondary rounded-full" style={{
+        boxShadow: 'var(--glow-blue)'
+      }} />
       </div>
 
       {/* Floating Gears */}
       <div className="absolute top-20 right-20 gear-icon opacity-10">
         <Gear size={64} weight="light" className="text-primary" />
       </div>
-      <div className="absolute bottom-40 left-20 gear-icon opacity-10" style={{ animationDirection: 'reverse' }}>
+      <div className="absolute bottom-40 left-20 gear-icon opacity-10" style={{
+      animationDirection: 'reverse'
+    }}>
         <Gear size={48} weight="light" className="text-accent" />
       </div>
 
@@ -110,10 +119,10 @@ const Hero = () => {
           {/* Subtitle */}
           <div className="hero-subtitle mb-8">
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-foreground/90 mb-4">
-              Robotic Enthusiast
+              ​Mech Design Innovator      
             </h2>
             <p className="text-lg md:text-xl text-foreground/70 font-light tracking-wide">
-              Passionate about Robotics, Mechanical Design & Intelligent Systems
+              Passionate about Mechanical Design, Innovation & Intelligent Systems
             </p>
           </div>
 
@@ -131,22 +140,15 @@ const Hero = () => {
 
           {/* Skill Tags */}
           <div className="hero-badge flex flex-wrap gap-3 justify-center mb-12">
-            {['CAD', 'CAM', 'Robotics', 'Web Dev', '3D', 'Simulation'].map((skill) => (
-              <span
-                key={skill}
-                className="px-4 py-2 rounded-lg bg-muted/50 border border-primary/20 text-sm font-medium text-primary hover:bg-primary/10 transition-colors cursor-default"
-              >
+            {['CAD', 'CAM', 'Robotics', 'Web Dev', '3D', 'Simulation'].map(skill => <span key={skill} className="px-4 py-2 rounded-lg bg-muted/50 border border-primary/20 text-sm font-medium text-primary hover:bg-primary/10 transition-colors cursor-default">
                 {skill}
-              </span>
-            ))}
+              </span>)}
           </div>
 
           {/* CTA Button */}
-          <button
-            onClick={() => scrollToSection('contact')}
-            className="hero-button group relative px-8 py-4 rounded-full bg-primary text-background font-semibold text-lg overflow-hidden hover:scale-105 transition-transform duration-300"
-            style={{ boxShadow: 'var(--glow-cyan)' }}
-          >
+          <button onClick={() => scrollToSection('contact')} className="hero-button group relative px-8 py-4 rounded-full bg-primary text-background font-semibold text-lg overflow-hidden hover:scale-105 transition-transform duration-300" style={{
+          boxShadow: 'var(--glow-cyan)'
+        }}>
             <span className="relative z-10 flex items-center gap-3">
               Hire Me
               <ArrowRight size={20} weight="bold" className="group-hover:translate-x-1 transition-transform" />
@@ -162,8 +164,6 @@ const Hero = () => {
           <div className="w-1 h-2 bg-primary rounded-full" />
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
