@@ -52,7 +52,7 @@ const Navbar = () => {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
-              {['About', 'Projects', 'Contact'].map((item) => (
+              {['About', 'Projects', 'Internship', 'Workshop', 'Contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
@@ -85,7 +85,7 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="fixed inset-0 z-30 md:hidden bg-background/95 backdrop-blur-2xl">
           <div className="flex flex-col items-center justify-center h-full gap-8">
-            {['About', 'Projects', 'Contact'].map((item, index) => (
+            {['About', 'Projects', 'Internship', 'Workshop', 'Contact'].map((item, index) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
