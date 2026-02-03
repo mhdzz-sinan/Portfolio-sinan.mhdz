@@ -65,7 +65,7 @@ const About = () => {
   }, []);
 
   const stats = [
-    { label: 'Advanced Engineering Projects', value: '2+' },
+    { label: 'Advanced Engineering Projects', value: 'Projects' },
     { label: 'Active CAD Prototyping', value: 'CAD' },
     { label: 'Hands-on Technical Training', value: 'Workshops' },
     { label: 'Enthusiast in Design & Innovation', value: 'Design' },
