@@ -140,7 +140,7 @@ const Hero = () => {
 
           {/* Skill Tags */}
           <div className="hero-badge flex flex-wrap gap-3 justify-center mb-12">
-            {['CAD', 'CAM', 'Robotics', 'Web Dev', '3D', 'Simulation'].map(skill => <span key={skill} className="px-4 py-2 rounded-lg bg-muted/50 border border-primary/20 text-sm font-medium text-primary hover:bg-primary/10 transition-colors cursor-default">
+            {['Design', 'Innovation', 'WEB DEV', 'CAD', 'Simulation', 'Automation'].map(skill => <span key={skill} className="px-4 py-2 rounded-lg bg-muted/50 border border-primary/20 text-sm font-medium text-primary hover:bg-primary/10 transition-colors cursor-default">
                 {skill}
               </span>)}
           </div>

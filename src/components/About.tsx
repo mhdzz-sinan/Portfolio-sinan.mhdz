@@ -65,21 +65,25 @@ const About = () => {
   }, []);
 
   const stats = [
-    { label: 'Engineering Projects', value: '2+' },
-    { label: 'CAD Prototyping', value: 'Active' },
-    { label: 'Workshop - NIT Calicut', value: 'Power BI' },
-    { label: 'Robotics & Design', value: 'Enthusiast' },
+    { label: 'Advanced Engineering Projects', value: '2+' },
+    { label: 'Active CAD Prototyping', value: 'CAD' },
+    { label: 'Hands-on Technical Training', value: 'Training' },
+    { label: 'Enthusiast Design & Innovation', value: 'Design' },
+    { label: 'Industrial Training & Internships', value: 'Industry' },
+    { label: 'Simulation & Analysis', value: 'FEA/CFD' },
+    { label: 'Manufacturing & DFM', value: 'DFM' },
+    { label: 'Automation & Systems', value: 'Auto' },
   ];
 
   const skills = [
     { name: 'CAD', icon: Cube, color: 'text-neon-cyan' },
-    { name: 'SolidWorks', icon: Wrench, color: 'text-neon-blue' },
-    { name: 'Sensors', icon: Cpu, color: 'text-neon-purple' },
-    { name: 'Microcontrollers', icon: Lightning, color: 'text-neon-violet' },
-    { name: 'GSAP', icon: ChartLine, color: 'text-neon-cyan' },
-    { name: 'React', icon: Code, color: 'text-neon-blue' },
-    { name: 'Database', icon: Database, color: 'text-neon-purple' },
-    { name: 'CAM', icon: Gear, color: 'text-neon-violet' },
+    { name: 'Simulation', icon: ChartLine, color: 'text-neon-blue' },
+    { name: 'Design', icon: Gear, color: 'text-neon-purple' },
+    { name: 'Automation', icon: Cpu, color: 'text-neon-violet' },
+    { name: 'Web Dev', icon: Code, color: 'text-neon-cyan' },
+    { name: 'Innovation', icon: Lightning, color: 'text-neon-blue' },
+    { name: 'DFM', icon: Wrench, color: 'text-neon-purple' },
+    { name: 'Analysis', icon: Database, color: 'text-neon-violet' },
   ];
 
   return (
@@ -132,24 +136,32 @@ const About = () => {
 
             <div className="glass-panel p-6 rounded-2xl space-y-4 text-foreground/80 leading-relaxed">
               <p>
-                I'm <span className="text-primary font-semibold">Mohammed Sinan</span>, a B.Tech Mechanical Engineering Student 
-                from <span className="text-accent font-semibold">TKM College of Engineering</span>, passionate about Robotics, 
-                CAD, CAM, Mechanical Design, and high-tech vehicle systems.
+                I'm <span className="text-primary font-semibold">Mohammed Sinan</span>, a B.Tech Mechanical Engineering student 
+                at <span className="text-accent font-semibold">TKM College of Engineering</span>, primarily focused on mechanical design and product development.
               </p>
               <p>
-                I also craft <span className="text-primary font-semibold">immersive web experiences</span> using modern 
-                technologies, bridging the gap between engineering precision and digital innovation.
+                My interests lie in <span className="text-primary font-semibold">CAD modeling, simulation-based design, and automation-oriented engineering</span>, where I work on converting ideas into optimized and manufacturable mechanical solutions. I'm particularly drawn to design innovation, system optimization, and building engineering solutions with real-world and startup applications.
+              </p>
+              <p>
+                Alongside core mechanical engineering, I explore modern technologies and digital tools that complement design and innovation, helping bridge <span className="text-accent font-semibold">engineering precision with emerging tech ecosystems</span>.
               </p>
             </div>
           </div>
         </div>
 
+        {/* Personal Section Header */}
+        <div className="text-center mb-8">
+          <h3 className="text-3xl font-bold tracking-tighter">
+            <span className="neon-text">Personal</span>
+          </h3>
+        </div>
+
         {/* Stats Grid */}
-        <div className="stats-grid grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
+        <div className="stats-grid grid grid-cols-2 md:grid-cols-4 gap-4 mb-20">
           {stats.map((stat, index) => (
-            <div key={index} className="stat-card glass-panel p-6 rounded-2xl text-center group hover:scale-105 transition-transform duration-300">
-              <div className="text-3xl font-bold neon-text mb-2">{stat.value}</div>
-              <div className="text-sm text-foreground/70">{stat.label}</div>
+            <div key={index} className="stat-card glass-panel p-4 rounded-2xl text-center group hover:scale-105 transition-transform duration-300 relative">
+              <div className="text-xl font-bold neon-text mb-1">{stat.value}</div>
+              <div className="text-xs text-foreground/70">{stat.label}</div>
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
           ))}

@@ -62,11 +62,11 @@ const Loader = ({ onLoadComplete }: { onLoadComplete: () => void }) => {
       {/* Logo & Text */}
       <div className="loader-logo relative z-10 text-center">
         <div className="mb-8">
-          <h1 className="text-6xl font-bold tracking-tighter neon-text">
-            SINAN
+        <h1 className="text-4xl md:text-6xl font-bold tracking-tighter neon-text">
+            MOHAMMED SINAN
           </h1>
-          <div className="mt-2 text-sm font-light tracking-widest text-primary uppercase">
-            Robotics & Web
+          <div className="mt-2 text-xs md:text-sm font-light tracking-widest text-primary uppercase">
+            Mechanical Designer & Web Developer
           </div>
         </div>
 
