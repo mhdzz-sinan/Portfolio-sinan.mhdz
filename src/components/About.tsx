@@ -149,15 +149,16 @@ const About = () => {
           </div>
         </div>
 
-        {/* Personal Section Header */}
+        {/* Tech Arsenal Section Header */}
         <div className="text-center mb-8">
           <h3 className="text-3xl font-bold tracking-tighter">
-            <span className="neon-text">Personal</span>
+            <span className="text-foreground">Tech </span>
+            <span className="neon-text">Arsenal</span>
           </h3>
         </div>
 
         {/* Stats Grid */}
-        <div className="stats-grid grid grid-cols-2 md:grid-cols-4 gap-4 mb-20">
+        <div className="stats-grid grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
           {stats.map((stat, index) => (
             <div key={index} className="stat-card glass-panel p-4 rounded-2xl text-center group hover:scale-105 transition-transform duration-300 relative">
               <div className="text-xl font-bold neon-text mb-1">{stat.value}</div>
@@ -167,28 +168,18 @@ const About = () => {
           ))}
         </div>
 
-        {/* Skills Section */}
-        <div>
-          <h3 className="text-3xl font-bold tracking-tighter mb-8 text-center">
-            <span className="text-foreground">Tech </span>
-            <span className="neon-text">Arsenal</span>
-          </h3>
-
-          <div className="skills-grid grid grid-cols-4 md:grid-cols-8 gap-6">
-            {skills.map((skill, index) => (
-              <div 
-                key={index} 
-                className="skill-icon group flex flex-col items-center gap-3 p-4 rounded-xl glass-panel hover:scale-110 transition-transform duration-300 cursor-default"
-              >
-                <skill.icon 
-                  size={40} 
-                  weight="light" 
-                  className={`${skill.color} group-hover:rotate-12 transition-transform duration-300`}
-                />
-                <span className="text-xs font-medium text-foreground/70 text-center">{skill.name}</span>
-              </div>
-            ))}
-          </div>
+        {/* Let's Connect Button */}
+        <div className="text-center">
+          <button 
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            className="group relative px-8 py-4 rounded-full bg-primary text-background font-semibold text-lg overflow-hidden hover:scale-105 transition-transform duration-300"
+            style={{ boxShadow: 'var(--glow-cyan)' }}
+          >
+            <span className="relative z-10 flex items-center gap-3">
+              Let's Connect
+            </span>
+            <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          </button>
         </div>
       </div>
     </section>
