@@ -158,7 +158,7 @@ const About = () => {
         </div>
 
         {/* Stats Grid */}
-        <div className="stats-grid grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+        <div className="stats-grid grid grid-cols-2 md:grid-cols-4 gap-4">
           {stats.map((stat, index) => (
             <div key={index} className="stat-card glass-panel p-4 rounded-2xl text-center group hover:scale-105 transition-transform duration-300 relative">
               <div className="text-xl font-bold neon-text mb-1">{stat.value}</div>
@@ -166,20 +166,6 @@ const About = () => {
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
           ))}
-        </div>
-
-        {/* Let's Connect Button */}
-        <div className="text-center">
-          <button 
-            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            className="group relative px-8 py-4 rounded-full bg-primary text-background font-semibold text-lg overflow-hidden hover:scale-105 transition-transform duration-300"
-            style={{ boxShadow: 'var(--glow-cyan)' }}
-          >
-            <span className="relative z-10 flex items-center gap-3">
-              Let's Connect
-            </span>
-            <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          </button>
         </div>
       </div>
     </section>
