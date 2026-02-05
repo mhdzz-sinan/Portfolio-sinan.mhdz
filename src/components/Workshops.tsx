@@ -24,13 +24,27 @@ const Workshops = () => {
   const [selectedWorkshop, setSelectedWorkshop] = useState<Workshop | null>(null);
 
   useEffect(() => {
-    gsap.from('.workshop-card', {
+    // Section header animation
+    gsap.from('.workshops-header', {
       scrollTrigger: {
         trigger: '.workshops-section',
         start: 'top center',
       },
       opacity: 0,
       y: 30,
+      duration: 0.8,
+      ease: 'power3.out'
+    });
+
+    // Workshop cards stagger animation
+    gsap.from('.workshop-card', {
+      scrollTrigger: {
+        trigger: '.workshops-section',
+        start: 'top 60%',
+      },
+      opacity: 0,
+      y: 30,
+      scale: 0.95,
       duration: 0.6,
       stagger: 0.1,
       ease: 'power2.out'
@@ -220,7 +234,7 @@ const Workshops = () => {
 
         <div className="container mx-auto px-6 relative z-10">
           {/* Section Header */}
-          <div className="text-center mb-16">
+          <div className="workshops-header text-center mb-16">
             <div className="inline-block px-4 py-2 rounded-full bg-primary/10 border border-primary/30 text-primary text-sm font-medium mb-6">
               Technical Training
             </div>

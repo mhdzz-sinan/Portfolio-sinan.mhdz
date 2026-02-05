@@ -25,16 +25,29 @@ const Internships = () => {
   const [selectedInternship, setSelectedInternship] = useState<Internship | null>(null);
 
   useEffect(() => {
-    gsap.from('.internship-card', {
+    // Section header animation
+    gsap.from('.internships-header', {
       scrollTrigger: {
         trigger: '.internships-section',
         start: 'top center',
       },
       opacity: 0,
-      y: 50,
+      y: 30,
       duration: 0.8,
-      stagger: 0.2,
       ease: 'power3.out'
+    });
+
+    // Internship cards stagger animation
+    gsap.from('.internship-card', {
+      scrollTrigger: {
+        trigger: '.internships-section',
+        start: 'top 60%',
+      },
+      opacity: 0,
+      x: -50,
+      duration: 0.6,
+      stagger: 0.2,
+      ease: 'power2.out'
     });
   }, []);
 
@@ -106,7 +119,7 @@ const Internships = () => {
 
         <div className="container mx-auto px-6 relative z-10">
           {/* Section Header */}
-          <div className="text-center mb-16">
+          <div className="internships-header text-center mb-16">
             <div className="inline-block px-4 py-2 rounded-full bg-primary/10 border border-primary/30 text-primary text-sm font-medium mb-6">
               Professional Experience
             </div>
