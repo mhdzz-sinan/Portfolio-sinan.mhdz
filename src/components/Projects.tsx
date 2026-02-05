@@ -28,15 +28,29 @@ const Projects = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   useEffect(() => {
-    gsap.from('.project-card', {
+    // Section header animation
+    gsap.from('.projects-header', {
       scrollTrigger: {
         trigger: '.projects-section',
         start: 'top center',
       },
       opacity: 0,
-      y: 50,
+      y: 30,
       duration: 0.8,
-      stagger: 0.2,
+      ease: 'power3.out'
+    });
+
+    // Project cards stagger animation
+    gsap.from('.project-card', {
+      scrollTrigger: {
+        trigger: '.projects-section',
+        start: 'top 60%',
+      },
+      opacity: 0,
+      y: 50,
+      scale: 0.95,
+      duration: 0.8,
+      stagger: 0.15,
       ease: 'power3.out'
     });
   }, []);
@@ -146,7 +160,7 @@ const Projects = () => {
 
         <div className="container mx-auto px-6 relative z-10">
           {/* Section Header */}
-          <div className="text-center mb-16">
+          <div className="projects-header text-center mb-16">
             <div className="inline-block px-4 py-2 rounded-full bg-primary/10 border border-primary/30 text-primary text-sm font-medium mb-6">
               Featured Work
             </div>

@@ -8,7 +8,6 @@ import Projects from '@/components/Projects';
 import Internships from '@/components/Internships';
 import Workshops from '@/components/Workshops';
 import Contact from '@/components/Contact';
-import CTASection from '@/components/CTASection';
 
 const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -50,7 +49,6 @@ const Index = () => {
           <Internships />
           <Workshops />
           <Contact />
-          <CTASection />
         </main>
       </div>
 
