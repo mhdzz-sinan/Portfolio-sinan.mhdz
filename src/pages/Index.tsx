@@ -8,18 +8,21 @@ import Projects from '@/components/Projects';
 import Internships from '@/components/Internships';
 import Workshops from '@/components/Workshops';
 import Contact from '@/components/Contact';
-import Footer from '@/components/Footer';
 import CTASection from '@/components/CTASection';
 
 const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [showContent, setShowContent] = useState(false);
 
   useEffect(() => {
-    // Prevent scroll during loading
     if (isLoading) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'auto';
+      // Small delay to ensure smooth transition
+      requestAnimationFrame(() => {
+        setShowContent(true);
+      });
     }
 
     return () => {
@@ -33,28 +36,26 @@ const Index = () => {
 
   return (
     <div className="relative min-h-screen bg-background text-foreground">
-      {/* Loader */}
+      {/* Main Content - Always rendered but hidden initially */}
+      <div 
+        className={`transition-opacity duration-300 ${showContent ? 'opacity-100' : 'opacity-0'}`}
+        style={{ visibility: isLoading ? 'hidden' : 'visible' }}
+      >
+        <CustomCursor />
+        <Navbar />
+        <main>
+          <Hero />
+          <About />
+          <Projects />
+          <Internships />
+          <Workshops />
+          <Contact />
+          <CTASection />
+        </main>
+      </div>
+
+      {/* Loader - On top */}
       {isLoading && <Loader onLoadComplete={handleLoadComplete} />}
-
-      {/* Custom Cursor */}
-      {!isLoading && <CustomCursor />}
-
-      {/* Main Content */}
-      {!isLoading && (
-        <>
-          <Navbar />
-          <main>
-            <Hero />
-            <About />
-            <Projects />
-            <Internships />
-            <Workshops />
-            <Contact />
-            <CTASection />
-          </main>
-          <Footer />
-        </>
-      )}
     </div>
   );
 };

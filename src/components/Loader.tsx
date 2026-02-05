@@ -5,15 +5,16 @@ const Loader = ({ onLoadComplete }: { onLoadComplete: () => void }) => {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
+    // Pre-load the main content by triggering completion earlier
     const tl = gsap.timeline({
       onComplete: () => {
-        setTimeout(onLoadComplete, 100);
+        onLoadComplete();
       }
     });
 
     // Animate progress bar
     tl.to({}, {
-      duration: 1.5,
+      duration: 1.2,
       onUpdate: function() {
         setProgress(Math.floor(this.progress() * 100));
       }
@@ -23,21 +24,22 @@ const Loader = ({ onLoadComplete }: { onLoadComplete: () => void }) => {
     tl.from('.loader-logo', {
       opacity: 0,
       scale: 0.5,
-      duration: 0.5,
+      duration: 0.4,
       ease: 'back.out(1.7)'
     }, 0);
 
     tl.to('.loader-logo', {
       opacity: 0,
       scale: 1.2,
-      duration: 0.3,
+      duration: 0.2,
       ease: 'power2.in'
-    }, 1.5);
+    }, 1.2);
 
     tl.to('.loader-screen', {
       opacity: 0,
-      duration: 0.3
-    }, 1.8);
+      pointerEvents: 'none',
+      duration: 0.2
+    }, 1.2);
 
     return () => {
       tl.kill();
@@ -45,7 +47,7 @@ const Loader = ({ onLoadComplete }: { onLoadComplete: () => void }) => {
   }, [onLoadComplete]);
 
   return (
-    <div className="loader-screen fixed inset-0 z-50 flex items-center justify-center bg-background">
+    <div className="loader-screen fixed inset-0 z-50 flex items-center justify-center bg-background will-change-transform">
       {/* Holographic Scan Lines */}
       <div className="absolute inset-0 overflow-hidden opacity-20">
         <div className="scan-line absolute inset-x-0 h-32 bg-gradient-to-b from-transparent via-neon-cyan to-transparent" />
