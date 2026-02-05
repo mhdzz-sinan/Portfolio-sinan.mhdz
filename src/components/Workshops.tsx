@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowUpRight, X, Certificate, Calendar, MapPin } from '@phosphor-icons/react';
-import CTASection from './CTASection';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -293,9 +292,6 @@ const Workshops = () => {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
-      <CTASection />
 
       {/* Workshop Detail Modal */}
       {selectedWorkshop && (

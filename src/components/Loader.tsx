@@ -7,13 +7,13 @@ const Loader = ({ onLoadComplete }: { onLoadComplete: () => void }) => {
   useEffect(() => {
     const tl = gsap.timeline({
       onComplete: () => {
-        setTimeout(onLoadComplete, 500);
+        setTimeout(onLoadComplete, 100);
       }
     });
 
     // Animate progress bar
     tl.to({}, {
-      duration: 2.5,
+      duration: 1.5,
       onUpdate: function() {
         setProgress(Math.floor(this.progress() * 100));
       }
@@ -23,21 +23,21 @@ const Loader = ({ onLoadComplete }: { onLoadComplete: () => void }) => {
     tl.from('.loader-logo', {
       opacity: 0,
       scale: 0.5,
-      duration: 0.8,
+      duration: 0.5,
       ease: 'back.out(1.7)'
     }, 0);
 
     tl.to('.loader-logo', {
       opacity: 0,
       scale: 1.2,
-      duration: 0.5,
+      duration: 0.3,
       ease: 'power2.in'
-    }, 2.5);
+    }, 1.5);
 
     tl.to('.loader-screen', {
       opacity: 0,
-      duration: 0.5
-    }, 3);
+      duration: 0.3
+    }, 1.8);
 
     return () => {
       tl.kill();

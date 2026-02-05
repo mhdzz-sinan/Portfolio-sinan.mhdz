@@ -9,6 +9,7 @@ import Internships from '@/components/Internships';
 import Workshops from '@/components/Workshops';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import CTASection from '@/components/CTASection';
 
 const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -49,6 +50,7 @@ const Index = () => {
             <Internships />
             <Workshops />
             <Contact />
+            <CTASection />
           </main>
           <Footer />
         </>
