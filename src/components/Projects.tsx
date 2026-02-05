@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowUpRight, X } from '@phosphor-icons/react';
-import CTASection from './CTASection';
 import projectIdeaLab from '@/assets/project-idea-lab.jpeg';
 import projectEma from '@/assets/project-ema.jpeg';
 import projectPcm from '@/assets/project-pcm.jpeg';
@@ -236,9 +235,6 @@ const Projects = () => {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
-      <CTASection />
 
       {/* Project Detail Modal */}
       {selectedProject && (
