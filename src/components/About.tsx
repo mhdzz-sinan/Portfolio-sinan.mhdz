@@ -72,7 +72,7 @@ const About = () => {
     { label: 'Industrial Training & Internships', value: 'Internships' },
     { label: 'Simulation & Analysis', value: 'Simulation' },
     { label: 'Manufacturing & DFM', value: 'Manufacturing' },
-    { label: 'Automation & Systems', value: 'Auto' },
+    { label: 'Automation & Systems', value: 'Automation' },
   ];
 
   const skills = [
@@ -161,8 +161,8 @@ const About = () => {
         <div className="stats-grid grid grid-cols-2 md:grid-cols-4 gap-4">
           {stats.map((stat, index) => (
             <div key={index} className="stat-card glass-panel p-4 rounded-2xl text-center group hover:scale-105 transition-transform duration-300 relative">
-              <div className="text-xl font-bold neon-text mb-1">{stat.value}</div>
-              <div className="text-xs text-foreground/70">{stat.label}</div>
+              <div className="text-base md:text-xl font-bold neon-text mb-1 truncate">{stat.value}</div>
+              <div className="text-[10px] md:text-xs text-foreground/70 leading-tight">{stat.label}</div>
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
           ))}
