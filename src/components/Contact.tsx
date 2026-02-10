@@ -113,8 +113,8 @@ const Contact = () => {
     {
       icon: EnvelopeSimple,
       label: 'Email',
-      value: 'hafizsinan12321@gmail.com',
-      href: 'mailto:hafizsinan12321@gmail.com'
+      value: 'mhdzzsinan@gmail.com',
+      href: 'mailto:mhdzzsinan@gmail.com'
     },
     {
       icon: Phone,
