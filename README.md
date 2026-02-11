@@ -3,7 +3,7 @@
 Welcome to my personal portfolio website — a modern, responsive, and professional web platform built to showcase my skills, projects, and technical journey.
 
 🌐 **Live Website:**  
-👉 https://mhdzz-sinan.netlify.app/
+👉 https://sinsnmhdz-portfolio.netlify.app/
 
 ---
 
