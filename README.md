@@ -1,4 +1,4 @@
-# 🚀 Mohammed Sinan | Robotics & Tech Portfolio
+# 🚀 Mohammed Sinan | Tech Portfolio
 
 Welcome to my personal portfolio website — a modern, responsive, and professional web platform built to showcase my skills, projects, and technical journey.
 
@@ -9,7 +9,7 @@ Welcome to my personal portfolio website — a modern, responsive, and professio
 
 ## 📌 About This Portfolio
 
-This portfolio represents my work, technical skills, and passion for robotics, engineering, and modern web technologies.  
+This portfolio represents my work, technical skills, and passion for mechanical design, innovation, and modern web technologies.  
 It is designed with a clean UI, smooth navigation, and responsive layout to ensure an excellent user experience across all devices.
 
 The website acts as a central hub where recruiters, collaborators, and peers can explore my projects and connect with me.
