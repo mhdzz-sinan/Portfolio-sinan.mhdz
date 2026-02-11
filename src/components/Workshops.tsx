@@ -238,7 +238,7 @@ const Workshops = () => {
             <div className="inline-block px-4 py-2 rounded-full bg-primary/10 border border-primary/30 text-primary text-sm font-medium mb-6">
               Technical Training
             </div>
-            <h2 className="text-5xl md:text-6xl font-bold tracking-tighter mb-4">
+            <h2 className="text-4xl md:text-6xl font-bold tracking-tighter mb-4">
               <span className="text-foreground">Technical </span>
               <span className="neon-text">Workshops</span>
             </h2>

@@ -111,14 +111,14 @@ const Hero = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Main Title */}
-          <h1 className="hero-title text-6xl md:text-8xl font-bold tracking-tighter mb-6">
+          <h1 className="hero-title text-5xl md:text-8xl font-bold tracking-tighter mb-6">
             <span className="text-foreground">Hi, I'm </span>
             <span className="neon-text">Sinan</span>
           </h1>
 
           {/* Subtitle */}
           <div className="hero-subtitle mb-8">
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-foreground/90 mb-4">
+            <h2 className="text-2xl md:text-5xl font-bold tracking-tight text-foreground/90 mb-4">
               ​Mech Design Innovator      
             </h2>
             <p className="text-lg md:text-xl text-foreground/70 font-light tracking-wide">

@@ -95,7 +95,7 @@ const About = () => {
       <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/20 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="grid md:grid-cols-2 gap-16 items-center mb-20">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center mb-20">
           {/* Image Side */}
           <div className="about-image relative">
             {/* Hologram Capsule Frame */}
@@ -129,7 +129,7 @@ const About = () => {
               About Me
             </div>
 
-            <h2 className="text-5xl font-bold tracking-tighter mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tighter mb-6">
               <span className="text-foreground">Building the </span>
               <span className="neon-text">Future</span>
             </h2>
