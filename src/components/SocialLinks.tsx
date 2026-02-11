@@ -21,7 +21,7 @@ const socialLinks = [
   },
   { 
     icon: GithubLogo, 
-    href: 'https://github.com/sinanmhdz', 
+    href: 'https://github.com/mhdzz-sinan', 
     label: 'GitHub',
     hoverLabel: 'View Code'
   },
@@ -98,11 +98,11 @@ const SocialLinks = ({ variant = 'contact', showLabels = false }: SocialLinksPro
   const getContainerClasses = () => {
     switch (variant) {
       case 'hero':
-        return 'flex flex-col gap-4';
+        return 'flex flex-row lg:flex-col gap-4 justify-center';
       case 'footer':
-        return 'flex gap-4 justify-center';
+        return 'flex flex-wrap gap-4 justify-center';
       default:
-        return 'flex gap-4';
+        return 'flex flex-wrap gap-4';
     }
   };
 

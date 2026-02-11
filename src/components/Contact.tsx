@@ -146,7 +146,7 @@ const Contact = () => {
           <div className="inline-block px-4 py-2 rounded-full bg-primary/10 border border-primary/30 text-primary text-sm font-medium mb-6">
             Get In Touch
           </div>
-          <h2 className="text-5xl md:text-6xl font-bold tracking-tighter mb-4">
+          <h2 className="text-4xl md:text-6xl font-bold tracking-tighter mb-4">
             <span className="text-foreground">Let's </span>
             <span className="neon-text">Connect</span>
           </h2>
@@ -155,7 +155,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
           <div className="contact-form relative">
             {/* Success Hologram */}
